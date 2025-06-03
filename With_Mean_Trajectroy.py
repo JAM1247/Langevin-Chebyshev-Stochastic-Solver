@@ -510,7 +510,7 @@ if __name__ == "__main__":
         'T': 5.0,                  # Time horizon
         'dt': 0.01,                # Time step
         
-        # Optimization parameters (using best values)
+        # Optimization parameters 
         'N': 1000,                 # Ensemble size
         'lambda_reg': 0.01,        # Control regularization
         'chebyshev_order': 25,     # Control basis dimension (best value after analyzing the data from previous program)
@@ -518,7 +518,7 @@ if __name__ == "__main__":
         'max_epochs': 1000         # Max epochs before forced stop
     }
     
-    # Potential scenarios to explore
+    # Potential scenarios
     potential_scenarios = [
         {
             'a': 2.0, 'theta1': 5.0, 'theta2': -5.0,
