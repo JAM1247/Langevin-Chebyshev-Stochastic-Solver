@@ -93,10 +93,6 @@ def simulate_ensemble(x0, y0, fx, fy, u1_vec, u2_vec, sigma1, sigma2, dt, n_traj
 @functools.partial(jax.jit, static_argnums=(4, 5, 13))
 def compute_cost_with_components(coeffs, basis, x0, y0, fx, fy, sigma1, sigma2, dt, 
                                 targ_x, targ_y, lam, beta, n_traj, key):
-    """
-    Modified cost function with exponential weighting.
-    beta: exponential weight parameter
-    """
     order = basis.shape[1]
     coeffs_x, coeffs_y = coeffs[:order], coeffs[order:]
     u1_vec, u2_vec = get_controls(coeffs_x, coeffs_y, basis)
